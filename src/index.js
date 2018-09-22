@@ -2,6 +2,7 @@ import dva from 'dva';
 import './index.css';
 import products from './models/products';
 import login from './models/login';
+import layout from './models/layout';
 import home from './models/home';
 
 // 1. Initialize
@@ -22,6 +23,7 @@ const app = dva({
 // 此处是关键，用于routes下面的页面链接models下的页面
 app.model(products);
 app.model(login);
+app.model(layout);
 app.model(home);
 
 // 4. Router

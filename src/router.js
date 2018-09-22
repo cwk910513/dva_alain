@@ -14,8 +14,8 @@ function RouterConfig({ history }) {
         
         <Route path="/" exact component={IndexPage} />
         <Route path="/login" exact component={ Login }/>
-        <Route path="/home" exact component={ Home }/>
         <Route path="/layout" exact component={ Layout }/>
+        <Route path="/home" exact component={ Home }/>
 
       </Switch>
     </Router>

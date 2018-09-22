@@ -75,7 +75,6 @@ const Home = ({ dispatch, home }) => {
                     height: '22px',
                     background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
                     />}
-                    badge={1}
                     data-seed="logId"
                 >
                 </TabBar.Item>
@@ -92,7 +91,6 @@ const Home = ({ dispatch, home }) => {
                     height: '22px',
                     background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
                     />}
-                    badge={1}
                     data-seed="logId"
                 >
                 </TabBar.Item>
@@ -109,7 +107,6 @@ const Home = ({ dispatch, home }) => {
                     height: '22px',
                     background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
                     />}
-                    badge={1}
                     data-seed="logId"
                 >
                 </TabBar.Item>
