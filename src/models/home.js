@@ -1,27 +1,11 @@
 // import { routerRedux } from 'dva/router';
-// import { getLoginApi } from '../services/login';
+import { getHomeDataApi } from '../services/home';
 
 export default {
     namespace: 'home',
     
     state: {
-        carouselArray: [
-            { 'title': 'carousel-01', 'src': '/src/assets/images/carousel-01.png' },
-            { 'title': 'carousel-02', 'src': '/src/assets/images/carousel-02.png' },
-            { 'title': 'carousel-03', 'src': '/src/assets/images/carousel-03.png' }
-        ],
-        gridArray: [
-            { 'icon': '/src/assets/images/people.png', 'text': '自定义' },
-            { 'icon': '/src/assets/images/people.png', 'text': '自定义' },
-            { 'icon': '/src/assets/images/people.png', 'text': '自定义' },
-            { 'icon': '/src/assets/images/people.png', 'text': '自定义' },
-            { 'icon': '/src/assets/images/people.png', 'text': '自定义' },
-            { 'icon': '/src/assets/images/people.png', 'text': '自定义' },
-            { 'icon': '/src/assets/images/people.png', 'text': '自定义' },
-            { 'icon': '/src/assets/images/people.png', 'text': '自定义' },
-            { 'icon': '/src/assets/images/people.png', 'text': '自定义' },
-            { 'icon': '/src/assets/images/people.png', 'text': '自定义' }
-        ]
+        data: ''
     },
 
     // 订阅数据源，需要根据dispatch相应的action
@@ -31,15 +15,25 @@ export default {
 
     // 从服务端获取数据，发起一个action给reducers
     effects: {
-        
+        *getHomeData({ payload }, { call, put }) {
+            // 注解4：定义service中定义好的请求接口
+            const result = yield call(getHomeDataApi);
+
+            yield put({
+                type: 'getData',
+                payload: {
+                    eData: result.data
+                }
+            })
+        }
     },
 
     // 唯一能改变state的地方
     reducers: {
-        // 改变state中的username（外部通过dispatch调用方法，此处赋值）
-        'changeUsername'(state, { payload: name }) {
-            let currentState = { username: name, password: state.password };
-            return currentState;
+        // 改变state中的值（外部通过dispatch调用方法，此处赋值）
+        'getData'(state, { payload: { eData } }) {
+            // 注解5：第一个data是state的，第二个eData是payload的
+            return { ...state, data: eData };
         },
     },
 };
