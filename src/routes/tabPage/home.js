@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
+// import { SearchBar, Carousel, Card, Grid, TabBar, WhiteSpace } from 'antd-mobile';
 
 class TabHome extends React.Component{
 
