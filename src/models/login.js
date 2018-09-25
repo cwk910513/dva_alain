@@ -20,8 +20,8 @@ export default {
             const { data } = yield call(getLoginApi);
             if(data.code === 200) {
                 yield put({ type: 'getLogin' });
-                // 登录页面跳转到home页面
-                yield put(routerRedux.push('/home'));
+                // 登录页面跳转到layout页面
+                yield put(routerRedux.push('/layout'));
             }
         },
     },

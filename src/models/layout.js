@@ -1,11 +1,17 @@
-// import { routerRedux } from 'dva/router';
+import { routerRedux } from 'dva/router';
 // import { getLoginApi } from '../services/login';
 
 export default {
     namespace: 'layout',
     
     state: {
-        selectedTab: 'classify'
+        selectedTab: 'home',  // 下方tab默认选中
+        tabArray: [
+            { title: '首页', value: 'home' },
+            { title: '分类', value: 'classify' },
+            { title: '订单', value: 'order' },
+            { title: '我的', value: 'myself' }
+        ],                    // tab数组
     },
 
     // 订阅数据源，需要根据dispatch相应的action
@@ -24,7 +30,8 @@ export default {
         'changeTabFun'(state, { payload: tab }) {
             console.log('model--tab');
             console.log(tab);
-            let newState = { selectedTab: tab };
+            let newState = { selectedTab: tab, tabArray: state.tabArray };
+            routerRedux.push('/home');
             return newState;
         },
     },

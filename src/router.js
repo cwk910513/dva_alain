@@ -5,6 +5,7 @@ import Products from './routes/Products';
 import Login from './routes/login/login';
 import Home from './routes/home/home';
 import Layout from './routes/layout/layout';
+import TabHome from './routes/tabPage/home';
 
 function RouterConfig({ history }) {
   return (
@@ -15,6 +16,7 @@ function RouterConfig({ history }) {
         <Route path="/" exact component={IndexPage} />
         <Route path="/login" exact component={ Login }/>
         <Route path="/layout" exact component={ Layout }/>
+        <Route path="/tabHome" exact component={ TabHome }/>
         <Route path="/home" exact component={ Home }/>
 
       </Switch>

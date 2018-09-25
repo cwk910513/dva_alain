@@ -2,90 +2,56 @@ import React from 'react';
 import { connect } from 'dva';
 import { TabBar } from 'antd-mobile';
 import styles from '../layout/layout.less';
+import TabHome from '../tabPage/home';
+import TabClassify from '../tabPage/classify';
+import TabOrder from '../tabPage/order';
+import TabMyself from '../tabPage/myself';
 
 const Layout = ({ dispatch, layout }) => {
 
-    // 点击跳转到指定的tab页面
-    function renderContent(tab) {
-        // console.log('66666666666666666666');
-        console.log(tab);
+    // 点击加载指定的tab页面
+    function renderContent(tabValue) {
+        return (
+            <div style={{ backgroundColor: 'white', height: '100%' }}>
+                {( 
+                    () => {
+                        switch(tabValue){
+                            case "home": 
+                                return <TabHome></TabHome>;
+                            case "classify":
+                                return <TabClassify></TabClassify>; 
+                            case "order":
+                                return <TabOrder></TabOrder>; 
+                            case "myself":
+                                return <TabMyself></TabMyself>;
+                            default: return null;
+                        }
+                    }
+                ) ()}
+            </div>
+        );
     }
 
     return (
         <div className={ styles.container }>
             <TabBar unselectedTintColor="#949494" tintColor="#33A3F4" barTintColor="white" tabBarPosition="bottom">
-                <TabBar.Item
-                    title="首页"
-                    key="home"
-                    icon={ <div style={{ width: '22px', height: '22px', background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }} /> }
-                    selectedIcon={ <div style={{ width: '22px', height: '22px', background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }} /> }
-                    // onPress={ changeTab('home') }
-                    onPress={ () => {
-                        dispatch({
-                            type: 'layout/changeTabFun',
-                            payload: 'home'
-                        })
-                    } }
-                    selected={ layout.selectedTab === 'home' }
-                    data-seed="logId"
-                >
-                    { renderContent('home') }
-                    home
-                </TabBar.Item>
-                <TabBar.Item
-                    title="分类"
-                    key="classify"
-                    icon={ <div style={{ width: '22px', height: '22px', background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }} /> }
-                    selectedIcon={ <div style={{ width: '22px', height: '22px', background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }} /> }
-                    // onPress={ changeTab('classify') }
-                    onPress={ () => {
-                        dispatch({
-                            type: 'layout/changeTabFun',
-                            payload: 'classify'
-                        })
-                    } }
-                    selected={ layout.selectedTab === 'classify' }     
-                    data-seed="logId"
-                >
-                    { renderContent('classify') }
-                    classify
-                </TabBar.Item>
-                <TabBar.Item
-                    title="订单"
-                    key="order"
-                    icon={ <div style={{ width: '22px', height: '22px', background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }} /> }
-                    selectedIcon={ <div style={{ width: '22px', height: '22px', background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }} /> }
-                    // onPress={ changeTab('order') }
-                    onPress={ () => {
-                        dispatch({
-                            type: 'layout/changeTabFun',
-                            payload: 'order'
-                        })
-                    } }
-                    selected={ layout.selectedTab === 'order' }   
-                    data-seed="logId"
-                >
-                    { renderContent('order') }
-                    order
-                </TabBar.Item>
-                <TabBar.Item
-                    title="我的"
-                    key="myself"
-                    icon={ <div style={{ width: '22px', height: '22px', background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }} /> }
-                    selectedIcon={ <div style={{ width: '22px', height: '22px', background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }} /> }
-                    // onPress={ changeTab('myself') }
-                    onPress={ () => {
-                        dispatch({
-                            type: 'layout/changeTabFun',
-                            payload: 'myself'
-                        })
-                    } }
-                    selected={ layout.selectedTab === 'myself' }   
-                    data-seed="logId"
-                >
-                    { renderContent('myself') }
-                    myself
-                </TabBar.Item>
+            {
+                layout.tabArray.map( (tab, key) => (
+                    <TabBar.Item title={ tab.title } key={ key } 
+                        selectedIcon={ <div className={ styles.sltHomeIconStyle } /> }
+                        icon={ <div className={ styles.unSltHomeIconStyle } /> }
+                        onPress={ () => {
+                            dispatch({
+                                type: 'layout/changeTabFun',
+                                payload: tab.value
+                            })
+                        } }
+                        selected={ layout.selectedTab === tab.value }
+                    >   
+                        { renderContent(tab.value) }
+                    </TabBar.Item>
+                ) )
+            }
             </TabBar>
         </div>
     );

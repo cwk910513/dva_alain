@@ -1,3 +1,8 @@
+@homeSltIconUrl: url('../../assets/images/slt_home.svg');
+@homeUnSltIconUrl: url('../../assets/images/unslt_home.svg');
+@classifySltIconUrl: url('../../assets/images/slt_classify.svg');
+@classifyUnSltIconUrl: url('../../assets/images/unslt_classify.svg');
+
 .container {
   height: 100%;
   position: 'fixed'; height: '400px%'; bottom: '0px';
@@ -5,3 +10,30 @@
     border: 1px solid red;
   }
 }
+
+.iconStyle(@iconUrl) {
+  width: 22px;
+  height: 22px; 
+  background: @iconUrl center center /  21px 21px no-repeat;
+}
+
+// home选中
+.sltHomeIconStyle {
+  .iconStyle(@homeSltIconUrl);
+}
+
+// home未选中
+.unSltHomeIconStyle {
+  .iconStyle(@homeUnSltIconUrl);
+}
+
+// classify选中
+.sltClassifyIconStyle {
+  .iconStyle(@classifySltIconUrl);
+}
+
+// classify未选中
+.unSltClassifyIconStyle {
+  .iconStyle(@classifyUnSltIconUrl);
+}
+

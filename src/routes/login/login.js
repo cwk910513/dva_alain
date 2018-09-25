@@ -60,7 +60,6 @@ const Login = ({ dispatch, login }) => {
                 <Flex.Item>
                     <Flex>
                         <Flex.Item>
-                            {/* <img alt='logo' src='https://ng-alain.github.io/ng-alain/assets/logo-color.svg' style={{ width: '44px' }}/> */}
                             <img alt='logo' src="src/assets/images/logo.svg" style={{ width: '44px' }}/>
                         </Flex.Item>
                         <Flex.Item>
