@@ -38,7 +38,7 @@ class TabHome extends React.Component{
                 <Card full>
                     <Card.Header title={ self.props.levelTwo.title } />
                     <Card.Body style={{ padding: '0px' }}>
-                        <Grid data={ self.props.levelTwo.data } columnNum="5" square={ true } hasLine={ false } />
+                        <Grid data={ self.props.levelTwo.data } columnNum="4" square={ true } hasLine={ false } />
                     </Card.Body>
                 </Card>
             </div>
