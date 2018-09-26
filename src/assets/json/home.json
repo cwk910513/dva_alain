@@ -10,26 +10,26 @@
 				"levelOne": {
 					"title": "一级分类",
 					"data": [
-						{ "title": "表单", "src": "/src/assets/images/people.png" },
-						{ "title": "未定义1", "src": "/src/assets/images/people.png" },
-						{ "title": "未定义1", "src": "/src/assets/images/people.png" },
-						{ "title": "未定义1", "src": "/src/assets/images/people.png" },
-						{ "title": "未定义1", "src": "/src/assets/images/people.png" },
-						{ "title": "未定义1", "src": "/src/assets/images/people.png" },
-						{ "title": "未定义1", "src": "/src/assets/images/people.png" },
-						{ "title": "未定义1", "src": "/src/assets/images/people.png" }
+						{ "title": "表单", "icon": "/src/assets/images/people.png" },
+						{ "title": "未定义1", "icon": "/src/assets/images/people.png" },
+						{ "title": "未定义1", "icon": "/src/assets/images/people.png" },
+						{ "title": "未定义1", "icon": "/src/assets/images/people.png" },
+						{ "title": "未定义1", "icon": "/src/assets/images/people.png" },
+						{ "title": "未定义1", "icon": "/src/assets/images/people.png" },
+						{ "title": "未定义1", "icon": "/src/assets/images/people.png" },
+						{ "title": "未定义1", "icon": "/src/assets/images/people.png" }
 					]
 				},
 				"levelTwo": {
 					"title": "二级分类",
 					"data": [
-						{ "title": "未定义2", "src": "/src/assets/images/people.png" },
-						{ "title": "未定义2", "src": "/src/assets/images/people.png" },
-						{ "title": "未定义2", "src": "/src/assets/images/people.png" },
-						{ "title": "未定义2", "src": "/src/assets/images/people.png" },
-						{ "title": "未定义2", "src": "/src/assets/images/people.png" },
-						{ "title": "未定义2", "src": "/src/assets/images/people.png" },
-						{ "title": "未定义2", "src": "/src/assets/images/people.png" }
+						{ "title": "未定义2", "icon": "/src/assets/images/people.png" },
+						{ "title": "未定义2", "icon": "/src/assets/images/people.png" },
+						{ "title": "未定义2", "icon": "/src/assets/images/people.png" },
+						{ "title": "未定义2", "icon": "/src/assets/images/people.png" },
+						{ "title": "未定义2", "icon": "/src/assets/images/people.png" },
+						{ "title": "未定义2", "icon": "/src/assets/images/people.png" },
+						{ "title": "未定义2", "icon": "/src/assets/images/people.png" }
 					]
 				}
 			}

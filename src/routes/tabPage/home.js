@@ -1,13 +1,9 @@
 import React from 'react';
 // 注解1：如果需要使用this.props.dispathch的话，必须引用这个文件
 import { connect } from 'dva';   
-// import { SearchBar, Carousel, Card, Grid, TabBar, WhiteSpace } from 'antd-mobile';
+import { SearchBar, Carousel, Card, Grid, WhiteSpace } from 'antd-mobile';
 
 class TabHome extends React.Component{
-    constructor(props) {
-        super(props);
-    };
-
     componentWillMount() {
         let self = this;
         self.props.dispatch({
@@ -18,10 +14,33 @@ class TabHome extends React.Component{
     render () {
         // 注解2：查看网络请求出来的数据
         // this.props.data为mapStateToProps中的data
-        console.log(this.props.homeData);
+        let self = this;
         return (
             <div>
-                1111111111111
+                <SearchBar placeholder="Search"/>
+                <Carousel autoplay={ false } infinite>
+                    {
+                        self.props.carouselArray.map( (item, key) => (
+                            <img src={ item.src } alt={ item.title } key={ key }/>
+                        ))
+                    }
+                </Carousel>
+
+                <WhiteSpace size="lg" />
+                <Card full>
+                    <Card.Header title={ self.props.levelOne.title } />
+                    <Card.Body style={{ padding: '0px' }}>
+                        <Grid data={ self.props.levelOne.data } columnNum="4" square={ true } hasLine={ false } />
+                    </Card.Body>
+                </Card>
+
+                <WhiteSpace size="lg" />
+                <Card full>
+                    <Card.Header title={ self.props.levelTwo.title } />
+                    <Card.Body style={{ padding: '0px' }}>
+                        <Grid data={ self.props.levelTwo.data } columnNum="5" square={ true } hasLine={ false } />
+                    </Card.Body>
+                </Card>
             </div>
         );
     }
@@ -31,7 +50,10 @@ class TabHome extends React.Component{
 // 此处的state，是src/models/home.js中通过yield put返回的数据
 const mapStateToProps = (state) => {
     return {
-        homeData: state.home
+        homeData: state.home.data,
+        carouselArray: state.home.data ? state.home.data.data.carouselArray : [],
+        levelOne: state.home.data ? state.home.data.data.levelOne : [],
+        levelTwo: state.home.data ? state.home.data.data.levelTwo : [],
     };
 };
 
