@@ -1,11 +1,13 @@
 // import { routerRedux } from 'dva/router';
 import { getClassifyDataApi } from '../services/classify';
+import { getDetailsByClassifyName } from '../services/classify';
 
 export default {
     namespace: 'classify',
     
     state: {
-        data: ''
+        data: '',
+        detailsArray: ''
     },
 
     // 订阅数据源，需要根据dispatch相应的action
@@ -25,6 +27,16 @@ export default {
                     eData: result.data
                 }
             })
+        },
+        *getDetailsByClassifyName({ payload }, { call, put }) {
+            const result = yield call(getDetailsByClassifyName, payload);
+            
+            yield put({
+                type: 'getByClassifyName',
+                payload: {
+                    detailsData: result.data
+                }
+            });
         }
     },
 
@@ -35,5 +47,8 @@ export default {
             // 注解5：第一个data是state的，第二个eData是payload的
             return { ...state, data: eData };
         },
+        'getByClassifyName'(state, { payload: { detailsData } }) {
+            return { ...state, detailsArray: detailsData };
+        }
     },
 };

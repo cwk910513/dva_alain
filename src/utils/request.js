@@ -34,13 +34,13 @@ function checkStatus(response) {
 //     },
 // };
 export default function request(url, options) {
-    console.log('获取request的请求信息');
-    console.log('url：'+ url);
-    console.log('options：'+ options);
-    console.log(HTTP_SERVER);
-    console.log(DEFAULT_OPTIONS);
-    console.log('---------------');
-    console.log(`${HTTP_SERVER}${url}`);
+    // console.log('获取request的请求信息');
+    // console.log('url：'+ url);
+    // console.log('options：'+ options);
+    // console.log(HTTP_SERVER);
+    // console.log(DEFAULT_OPTIONS);
+    // console.log('---------------');
+    // console.log(`${HTTP_SERVER}${url}`);
     return fetch(`${HTTP_SERVER}${url}`, {...DEFAULT_OPTIONS, ...options})
         .then(checkStatus)
         .then(parseJSON)
