@@ -4,7 +4,8 @@ import { connect } from 'dva';
 import { SearchBar, Carousel, Card, Grid, WhiteSpace } from 'antd-mobile';
 
 class TabHome extends React.Component{
-    componentWillMount() {
+    constructor(props) {
+        super(props);
         let self = this;
         self.props.dispatch({
             type: 'home/getHomeData'

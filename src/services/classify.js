@@ -11,6 +11,6 @@ export async function getClassifyDataApi() {
 
 // 通过classify名字获取分类详细数据
 export async function getDetailsByClassifyName(num) {
-    let apiUrl = num % 2 == 0 ? `${CLASSIFY_DETAILS_API}` : `${CLASSIFY_DETAILS_API2}`;
+    let apiUrl = num % 2 === 0 ? `${CLASSIFY_DETAILS_API}` : `${CLASSIFY_DETAILS_API2}`;
     return request(apiUrl);
 }

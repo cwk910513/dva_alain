@@ -3,7 +3,8 @@ import { connect } from 'dva';
 import { Tabs, Grid } from 'antd-mobile';
 
 class TabClassify extends React.Component{
-    componentWillMount() {
+    constructor(props) {
+        super(props)
         let self = this;
         self.props.dispatch({
             type: 'classify/getClassifyData'

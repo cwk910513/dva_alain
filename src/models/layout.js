@@ -5,7 +5,7 @@ export default {
     namespace: 'layout',
     
     state: {
-        selectedTab: 'classify',  // 下方tab默认选中
+        selectedTab: 'order',  // 下方tab默认选中
         tabArray: [
             { title: '首页', value: 'home' },
             { title: '分类', value: 'classify' },
