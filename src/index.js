@@ -4,6 +4,7 @@ import products from './models/products';
 import login from './models/login';
 import layout from './models/layout';
 import home from './models/home';
+import classify from './models/classify';
 
 // 1. Initialize
 const app = dva({
@@ -25,6 +26,7 @@ app.model(products);
 app.model(login);
 app.model(layout);
 app.model(home);
+app.model(classify);
 
 // 4. Router
 app.router(require('./router').default);

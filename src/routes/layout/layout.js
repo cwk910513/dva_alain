@@ -12,7 +12,7 @@ const Layout = ({ dispatch, layout }) => {
     // 点击加载指定的tab页面
     function renderContent(tabValue) {
         return (
-            <div style={{ backgroundColor: 'white', height: '100%' }}>
+            <div style={{ backgroundColor: '#eee', height: '100%' }}>
                 {( 
                     () => {
                         switch(tabValue){
