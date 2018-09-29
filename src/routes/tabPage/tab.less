@@ -1,3 +1,63 @@
-.itemBgColor {
-  color: '#33A3F4'
+@import '../../assets/common.less';
+
+.container {
+    background-color: @backgroundColor;
+    & > .cartTitle {
+        background-color: white;
+        .cartItem {
+            font-size: 18px;
+            color: @activeColor;
+        }
+        .itemBgColor {
+            color: @activeColor;
+        }
+    }
+    & > .cartInfo {
+        background-color: white;
+        .goodsTitle {
+            padding: 0px 14px;
+            .cardCheckbox {
+                padding-left: 0px;
+                .shopName {
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+        }
+        .cardBody {
+            padding: 0px 15px;
+        }
+        .goodsItem {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #ddd;
+            float: left;
+        }
+        .goodsName {
+            margin-left: 95px;
+            font-size: 13px;
+        }
+        .goodsInfo {
+            margin-left: 95px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        .goodsPrices {
+            margin-left: 95px;
+            color: red;
+            font-size: 13px;
+            font-weight: bold;
+            height: 40px;
+        }
+        .checkboxItem {
+            padding: 0px;
+        }
+    }
+    & > .cartCount {
+        width: 100%;
+        position: fixed;
+        bottom: 50px;;
+        left: 0;
+        background-color: white;
+    }
 }
