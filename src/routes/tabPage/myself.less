@@ -1,0 +1,26 @@
+@import '../../assets/common.less';
+
+.container {
+    & > .personInfo {
+        background-color: @activeColor;
+        .portrait {
+            height: 70px;
+            width: 70px;
+            border-radius: 40px;
+            background: url("../../assets/images/portrait.jpg") center center / 70px 70px no-repeat;
+        }
+        .message {
+            & > div {
+                color: @backgroundColor;
+            }
+        }
+        .username {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    .listItem {
+        font-size: 13px;
+    }
+}
