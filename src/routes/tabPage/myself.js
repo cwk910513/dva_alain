@@ -28,6 +28,7 @@ class TabMyself extends React.Component{
                             </Flex.Item>
                             <Flex.Item></Flex.Item>
                             <Flex.Item style={{ textAlign: 'right' }}>
+                                <i className="iconfont icon-xiyiji"></i>
                                 <img src="src/assets/images/shop.png" alt="设置" style={{ width: '25px', height: '25px' }} onClick={ self.settingClick }/>
                                 <WhiteSpace size="md"/>
                                 <WhiteSpace size="md"/>
