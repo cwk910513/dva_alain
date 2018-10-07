@@ -12,6 +12,11 @@ class TabHome extends React.Component{
         });
     };
 
+    // gridItem点击事件
+    gridItemClick = (el) => {
+        window.location.href = '/#/'+ el.type;
+    }
+
     render () {
         // 注解2：查看网络请求出来的数据
         // this.props.data为mapStateToProps中的data
@@ -31,7 +36,7 @@ class TabHome extends React.Component{
                 <Card full>
                     <Card.Header title={ self.props.levelOne.title } />
                     <Card.Body style={{ padding: '0px' }}>
-                        <Grid data={ self.props.levelOne.data } columnNum="4" square={ true } hasLine={ false } />
+                        <Grid data={ self.props.levelOne.data } columnNum="4" square={ true } hasLine={ false } onClick={ self.gridItemClick }/>
                     </Card.Body>
                 </Card>
 

@@ -10,10 +10,10 @@
 				"levelOne": {
 					"title": "一级分类",
 					"data": [
-						{ "text": "表单", "icon": "/src/assets/images/people.png" },
-						{ "text": "国际化", "icon": "/src/assets/images/people.png" },
-						{ "text": "懒加载", "icon": "/src/assets/images/people.png" },
-						{ "text": "图标", "icon": "/src/assets/images/people.png" },
+						{ "text": "表单", "type": "form", "icon": "/src/assets/images/people.png" },
+						{ "text": "国际化", "type": "language", "icon": "/src/assets/images/people.png" },
+						{ "text": "懒加载", "type": "lazyload", "icon": "/src/assets/images/people.png" },
+						{ "text": "图标", "type": "icon", "icon": "/src/assets/images/people.png" },
 						{ "text": "未定义1", "icon": "/src/assets/images/people.png" },
 						{ "text": "未定义1", "icon": "/src/assets/images/people.png" },
 						{ "text": "未定义1", "icon": "/src/assets/images/people.png" },

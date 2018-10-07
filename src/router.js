@@ -6,6 +6,7 @@ import Login from './routes/login/login';
 import Home from './routes/home/home';
 import Layout from './routes/layout/layout';
 import TabHome from './routes/tabPage/home';
+import formComponent from './routes/homeComponent/formComponent';
 
 function RouterConfig({ history }) {
   return (
@@ -18,6 +19,7 @@ function RouterConfig({ history }) {
         <Route path="/layout" exact component={ Layout }/>
         <Route path="/tabHome" exact component={ TabHome }/>
         <Route path="/home" exact component={ Home }/>
+        <Route path="/form" exact component={ formComponent }/>
 
       </Switch>
     </Router>
