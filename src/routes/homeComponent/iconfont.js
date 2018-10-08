@@ -504,11 +504,6 @@ class iconFontComponent extends React.Component{
                         <div>刷新</div>
                         <div>.icon-shuaxin</div>
                     </span>
-                    <span>
-                        <i className="iconfont icon-xxx"></i>
-                        <div>保存</div>
-                        <div>.icon-xxx</div>
-                    </span>
 
                     <span>
                         <i className="iconfont icon-fabu"></i>
@@ -921,7 +916,7 @@ class iconFontComponent extends React.Component{
                         <div>.icon-bug</div>
                     </span>
                     <span>
-                        <i className="iconfont icon-bagetcun"></i>
+                        <i className="iconfont icon-get"></i>
                         <div>get</div>
                         <div>.icon-get</div>
                     </span>
