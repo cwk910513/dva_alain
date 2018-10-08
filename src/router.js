@@ -9,6 +9,7 @@ import TabHome from './routes/tabPage/home';
 import formComponent from './routes/homeComponent/formComponent';
 import iconFontComponent from './routes/homeComponent/iconfont';
 import lazyloadComponent from './routes/homeComponent/lazyload';
+import languageComponent from './routes/homeComponent/language';
 
 function RouterConfig({ history }) {
   return (
@@ -23,6 +24,7 @@ function RouterConfig({ history }) {
         <Route path="/home" exact component={ Home }/>
         <Route path="/form" exact component={ formComponent }/>
         <Route path="/icon" exact component={ iconFontComponent }/>
+        <Route path="/language" exact component={ languageComponent }/>
         <Route path="/lazyload" exact component={ lazyloadComponent }/>
 
       </Switch>
