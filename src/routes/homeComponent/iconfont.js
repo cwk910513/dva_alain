@@ -15,8 +15,11 @@ class iconFontComponent extends React.Component{
         
         return (
             <div className={ styles.container }>
-                <NavBar mode="light" icon={ <Icon type="left" /> } onLeftClick={ self.leftClick }>图标</NavBar>
-                <WhiteSpace/>
+                <NavBar mode="light" icon={ <Icon type="left" /> } onLeftClick={ self.leftClick } className={ styles.navbar }>图标</NavBar>
+                <WhiteSpace size="lg"/>
+                <WhiteSpace size="lg"/>
+                <WhiteSpace size="lg"/>
+                <WhiteSpace size="md"/>
                 <div className={ styles.iconContent }>
                     <span>
                         <i className="iconfont icon-tiaoshi"></i>
