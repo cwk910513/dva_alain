@@ -6,7 +6,7 @@ import Login from './routes/login/login';
 import Home from './routes/home/home';
 import Layout from './routes/layout/layout';
 import TabHome from './routes/tabPage/home';
-import formComponent from './routes/homeComponent/formComponent';
+import formComponent from './routes/homeComponent/form';
 import iconFontComponent from './routes/homeComponent/iconfont';
 import lazyloadComponent from './routes/homeComponent/lazyload';
 import languageComponent from './routes/homeComponent/language';

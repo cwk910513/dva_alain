@@ -3,7 +3,6 @@ import enUS from 'antd-mobile/lib/locale-provider/en_US';
 import ruRU from 'antd-mobile/lib/locale-provider/ru_RU';
 import { connect } from 'dva';
 import { NavBar, Icon, Pagination, Picker, List, LocaleProvider, WhiteSpace } from 'antd-mobile';
-import styles from '../homeComponent/language.less';
 
 const seasons = [
                     [
@@ -70,7 +69,7 @@ class languageComponent extends React.Component{
         ];
         const currentLocale = languages.find(item => item.value === locale).language;
         return (
-            <div className={ styles.container }>
+            <div>
                 <NavBar mode="light" icon={ <Icon type="left" /> } onLeftClick={ self.leftClick }>国际化</NavBar>
                 <WhiteSpace/>
 

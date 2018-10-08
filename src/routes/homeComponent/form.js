@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import { NavBar, Picker, List, Icon, InputItem, TextareaItem, Button, WhiteSpace, WingBlank } from 'antd-mobile';
-import styles from '../homeComponent/formComponent.less';
+import styles from '../homeComponent/form.less';
 
 class formComponent extends React.Component{
     constructor(props) {
