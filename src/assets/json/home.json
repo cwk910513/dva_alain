@@ -14,10 +14,10 @@
 						{ "text": "国际化", "type": "language", "icon": "/src/assets/images/people.png" },
 						{ "text": "懒加载", "type": "lazyload", "icon": "/src/assets/images/people.png" },
 						{ "text": "图标", "type": "icon", "icon": "/src/assets/images/people.png" },
-						{ "text": "未定义1", "icon": "/src/assets/images/people.png" },
-						{ "text": "未定义1", "icon": "/src/assets/images/people.png" },
-						{ "text": "未定义1", "icon": "/src/assets/images/people.png" },
-						{ "text": "未定义1", "icon": "/src/assets/images/people.png" }
+						{ "text": "错误页面", "type": "error", "icon": "/src/assets/images/people.png" },
+						{ "text": "单元测试", "type": "test", "icon": "/src/assets/images/people.png" },
+						{ "text": "集成测试", "type": "test2", "icon": "/src/assets/images/people.png" },
+						{ "text": "未定义", "type": "", "icon": "/src/assets/images/people.png" }
 					]
 				},
 				"levelTwo": {

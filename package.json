@@ -10,6 +10,7 @@
     "antd": "^3.9.2",
     "antd-mobile": "^2.2.5",
     "babel-plugin-import": "^1.9.1",
+    "bizcharts": "^3.2.4",
     "dva": "^2.4.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

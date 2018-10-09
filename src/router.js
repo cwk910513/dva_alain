@@ -10,6 +10,7 @@ import formComponent from './routes/homeComponent/form';
 import iconFontComponent from './routes/homeComponent/iconfont';
 import lazyloadComponent from './routes/homeComponent/lazyload';
 import languageComponent from './routes/homeComponent/language';
+import errorComponent from './routes/homeComponent/error';
 
 function RouterConfig({ history }) {
   return (
@@ -26,6 +27,7 @@ function RouterConfig({ history }) {
         <Route path="/icon" exact component={ iconFontComponent }/>
         <Route path="/language" exact component={ languageComponent }/>
         <Route path="/lazyload" exact component={ lazyloadComponent }/>
+        <Route path="/error" exact component={ errorComponent }/>
 
       </Switch>
     </Router>
